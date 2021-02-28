@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="K-logistics web template"/>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); }
+
+
+
+
+    </script>
+    <!--// Meta tag Keywords -->
+
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="all"/>
+    <!-- for testimonials -->
+
+    <!-- css files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all"/> <!-- Style-CSS -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+    <!-- //css files -->
+
+    <!-- web-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- //web-fonts -->
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1><a href="{% url 'main_page:index' %}">Transporters</a></h1>
+        </div>
+        <div class="top-nav-text">
+            <div class="nav-contact-w3ls"><i class="fa fa-phone" aria-hidden="true"></i>
+                <p>+380 (98) 220 82 31</p></div>
+        </div>
+        <!-- navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'main_page:index' %}" class="hvr-underline-from-center active">Home</a></li>
+                <li><a href="{% url 'services_page:index' %}" class="hvr-underline-from-center">Services</a></li>
+                <li><a href="{% url 'contact_page:index' %}" class="hvr-underline-from-center">Contact</a>
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+    </nav>
+
+</div>
+{% block content %}
+
+{% endblock %}
+
+<footer>
+    <div class="agileits-klogistics-footer">
+        <div class="container">
+            <div class="col-md-6 w3-agile-grid">
+                <h5>О нас</h5>
+                <p>Логистика. Поиск транспорта по всей украине.
+                    Перевезём Ваш груз быстро и сохранно.
+                    Пунктуальные перевозчики.</p>
+                <div class="footer-agileinfo-social">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 w3-agile-grid">
+                <h5>Адреса</h5>
+                <div class="w3-address">
+                    <div class="w3-address-grid">
+                        <div class="w3-address-left">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3-address-right">
+                            <h6>Номер телефона</h6>
+                            <p>+380 (98) 220 82 31</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="w3-address-grid">
+                        <div class="w3-address-left">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3-address-right">
+                            <h6>Почта</h6>
+                            <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <p>© 2021 K-logistics. All rights reserved</a></p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+<!-- start-smoth-scrolling -->
+<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+
+
+
+</script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+
+
+
+</script>
+<!-- //here ends scrolling icon -->
+<!-- start-smoth-scrolling -->
+
+<!-- Baneer-js -->
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				pager:false,
+				nav: true,
+				speed: 1000,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+		});
+
+
+
+</script>
+<!-- //Baneer-js -->
+
+<!-- banner bottom video script -->
+<script src="{% static 'js/simplePlayer.js' %}"></script>
+<script>
+				$("document").ready(function() {
+					$("#video").simplePlayer();
+				});
+
+
+
+</script>
+<!-- //banner bottom video script -->
+
+<!-- Stats-Number-Scroller-Animation-JavaScript -->
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/counterup.min.js' %}"></script>
+<script>
+					jQuery(document).ready(function( $ ) {
+						$('.counter').counterUp({
+							delay: 100,
+							time: 1000
+						});
+					});
+
+
+
+</script>
+<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+
+<!-- FlexSlider-JavaScript -->
+<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script type="text/javascript">
+		$(function(){
+			SyntaxHighlighter.all();
+				});
+				$(window).load(function(){
+				$('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider){
+						$('body').removeClass('loading');
+					}
+			});
+		});
+
+
+
+</script>

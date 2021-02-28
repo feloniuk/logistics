@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="w3ls_address_mail_footer_grids">
+    <div class="heading">
+        <h2></h2>
+    </div>
+    <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5440403.888621737!2d26.689469221549352!3d48.25576773141219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d1d9c154700e8f%3A0x1068488f64010!2z0KPQutGA0LDQuNC90LA!5e0!3m2!1sru!2sin!4v1614527563029!5m2!1sru!2sin" loading="lazy"></iframe>
+        <div class="main_grid_contact">
+            <div class="col-md-6 contact-form">
+                <h4 class="white-w3ls">Форма <span>связи</span></h4>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="styled-input agile-styled-input-top">
+                        {{ form.name.errors }}
+                        {{ form.name }}
+                        <label for="{{ form.name.id_for_label }}">
+                            {{ form.name.help_text }}</label>
+                        <span></span>
+                    </div>
+                    <div class="styled-input">
+                        {{ form.phone.errors }}
+                        {{ form.phone }}
+                        <label for="{{ form.phone.id_for_label }}">
+                            {{ form.phone.help_text }}</label>
+                        <span></span>
+                    </div>
+                    <div class="styled-input">
+                        {{ form.description.errors }}
+                        {{ form.description }}
+                        <label for="{{ form.description.id_for_label }}">
+                            {{ form.description.help_text }}</label>
+
+                        <span></span>
+                    </div>
+                    <input type="submit" value="Отправить">
+                    <center>
+                        {% for message in messages %}
+                        {{ message|safe }}
+                        {% endfor %}
+                    </center>
+                </form>
+            </div>
+            <div class="col-md-6 contactright">
+                <h3>Контактная информация</h3>
+                <div class="w3ls_footer_grid_left">
+                    <div class="col-xs-4 wthree_footer_grid_left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>3481 Melrose Place, Beverly Hills, <span>New York City 90210.</span></p>
+                </div>
+                <div class="w3ls_footer_grid_left">
+                    <div class="col-xs-4 wthree_footer_grid_left">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>+(000) 123 4565 32 <span>+(010) 123 4565 35</span></p>
+                </div>
+                <div class="w3ls_footer_grid_left">
+                    <div class="col-xs-4 wthree_footer_grid_left">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <p><a href="mailto:info@example.com">info@example1.com</a>
+                        <span><a href="mailto:info@example.com">info@example2.com</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

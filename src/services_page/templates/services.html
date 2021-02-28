@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="Servicebottom">
+    <div class="layer">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-7 Servicebottomtext">
+            <h3>Быстрое и безопасное транспортное обслуживание</h3>
+            <h3>Специализированные большегрузные автомобили</h3>
+            <h3>Транспортные услуги & Управление логистикой</h3>
+            <p></p>
+            <h4><i class="fa fa-taxi" aria-hidden="true"></i>Стабильная Система Перевозок По Украине</h4>
+            <h4><i class="fa fa-truck" aria-hidden="true"></i>Служба логистики грузовых автомобилей</h4>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="services" id="services">
+    <div class="container">
+        <div class="servicegrids">
+            {% for i in result %}
+            {% if i.id > 0 %}
+            <div class="servicetopgrids">
+                <div class="col-md-4 servicegrid1">
+                    <h5>0{{ forloop.counter }}</h5>
+                    <h4>{{ i.title }}</h4>
+                    <p>{{ i.description }}</p>
+                </div>
+            </div>
+            {% elif i.id == 4 and i.id == 7 %}
+            <div class="servicebottomgrids">
+                <div class="col-md-4 servicegrid1">
+                    <h5>0{{ forloop.counter }}</h5>
+                    <h4>{{ i.title }}</h4>
+                    <p>{{ i.description }}</p>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- //services section -->
+
+<
+{% endblock %}
