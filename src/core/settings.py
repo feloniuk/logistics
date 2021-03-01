@@ -19,7 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0xs1k3^dw0!1h3qzi2%hnfsr3pvzv-)j*kzg$adz4_m1h7zq)+'
+# SECRET_KEY = '0xs1k3^dw0!1h3qzi2%hnfsr3pvzv-)j*kzg$adz4_m1h7zq)+'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '0xs1k3^dw0!1h3qzi2%hnfsr3pvzv-)j*kzg$adz4_m1h7zq)+')
 
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'smtp.ukr.net'
@@ -29,7 +30,8 @@ EMAIL_HOST_PASSWORD = '2yUPcuw1olzwqUUU'
 EMAIL_TIMEOUT = 50
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
