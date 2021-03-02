@@ -6,129 +6,17 @@
 <!-- Slider -->
 <div class="slider">
     <div class="callbacks_container">
-        <ul class="rslides" id="slider">
-            <li>
-                <div class="klogistics-banner-top klogistics-banner-top1">
-                    <div class="banner-dott">
-                        <div class="container">
-                            <div class="slider-info">
-                                <h2>Доступные перевозки любых сложностей</h2>
-                                <div class="w3ls-button">
-                                    <a href="{% url 'contact_page:index' %}">Заказать консультацию</a>
-                                </div>
-                                <div class="banner-form-agileinfo">
-                                    <form action="#" method="post">
-                                        {% csrf_token %}
-                                        {{ form.non_field_errors }}
-                                        <div class="col-md-6">
-                                            <h5><span>Откуда</span> везём Груз?</h5>
-                                            <p></p>
-                                            {{ form.name.errors }}
-                                            <label for="{{ form.name.id_for_label }}">
-                                                {{ form.name.help_text }}* :</label>
-                                            {{ form.name }}
-                                            {{ form.phone.errors }}
-                                            <label for="{{ form.phone.id_for_label }}">
-                                                {{ form.phone.help_text }}* :</label>
-                                            {{ form.phone }}
-                                            {{ form.email.errors }}
-                                            <label for="{{ form.email.id_for_label }}">
-                                                {{ form.email.help_text }}* :</label>
-                                            {{ form.email }}
-                                            <table>
-                                                <tr>
-                                                    <td>
-                                                        {{ form.region_from.errors }}
-                                                        <label for="{{ form.region_from.id_for_label }}">
-                                                            {{ form.region_from.help_text }}* :</label>
-                                                        {{ form.region_from }}
-                                                    </td>
-                                                    <td>
-                                                        {{ form.city_from.errors }}
-                                                        <label for="{{ form.city_from.id_for_label }}">
-                                                            {{ form.city_from.help_text }}* :</label>
-                                                        {{ form.city_from }}
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="cargo">
-                                                        {{ form.сargo_from.errors }}
-                                                        <label for="{{ form.сargo_from.id_for_label }}">
-                                                            {{ form.сargo_from.help_text }}* :</label>
-                                                        {{ form.сargo_from }}
-                                                    </td>
-                                                    <td class="cargo">
-                                                        {{ form.сargo_to.errors }}
-                                                        <label for="{{ form.сargo_to.id_for_label }}">
-                                                            {{ form.сargo_to.help_text }}* :</label>
-                                                        {{ form.сargo_to }}
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h5><span>Куда</span> везём Груз?</h5>
-                                            <p></p>
-                                            {{ form.receiver_name.errors }}
-                                            <label for="{{ form.receiver_name.id_for_label }}">
-                                                {{ form.receiver_name.help_text }}* :</label>
-                                            {{ form.receiver_name }}
-                                            <table>
-                                                <tr>
-                                                    <td>
-                                                        {{ form.region_to.errors }}
-                                                        <label for="{{ form.region_to.id_for_label }}">
-                                                            {{ form.region_to.help_text }}* :</label>
-                                                        {{ form.region_to }}
-                                                    <td>
-                                                        {{ form.city_to.errors }}
-                                                        <label for="{{ form.city_to.id_for_label }}">
-                                                            {{ form.city_to.help_text }}* :</label>
-                                                        {{ form.city_to }}
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        {{ form.value_cargo_from.errors }}
-                                                        <label for="{{ form.value_cargo_from.id_for_label }}">
-                                                            {{ form.value_cargo_from.help_text }}
-                                                            :</label>
-                                                        {{ form.value_cargo_from }}
-                                                    </td>
-                                                    <td>
-                                                        {{ form.value_cargo_to.errors }}
-                                                        <label for="{{ form.value_cargo_to.id_for_label }}">
-                                                            {{ form.value_cargo_to.help_text }} :</label>
-                                                        {{ form.value_cargo_to }}
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            {{ form.tipe_vehicle.errors }}
-                                            <label for="{{ form.tipe_vehicle.id_for_label }}">
-                                                {{ form.tipe_vehicle.help_text }} :</label>
-                                            {{ form.tipe_vehicle }}
-                                            {{ form.date.errors }}
-                                            <label for="{{ form.date.id_for_label }}">
-                                                {{ form.date.help_text }} (2008-01-10) :</label>
-                                            {{ form.date }}
-                                        </div>
-                                        <center>
-                                            {% if messages %}
-                                            {% for message in messages %}
-                                            {{ message|safe }}
-                                            {% endfor %}
-                                            {% endif %}
-                                        </center>
-                                        <input type="submit" class="hvr-shutter-in-vertical" value="Заказать"
-                                               name="submit_order">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+        <div class="klogistics-banner-top1">
+            <div class="container">
+                <div class="slider-info">
+                    <h2>Доступные перевозки любых сложностей</h2>
+                    <div class="w3ls-button">
+                        <a href="{% url 'contact_page:index' %}">Заказать консультацию</a>
+                        <a href="{% url 'main_page:order' %}">Отправить груз</a>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
     <div class="clearfix"></div>
 </div>

@@ -51,3 +51,20 @@ def index(request):
             'lists': lists,
         }
     )
+
+
+def order(request):
+    form = OrderBaseForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Заявка принята')
+            return HttpResponseRedirect(reverse('main_page:index'))
+
+    return render(
+        request,
+        template_name='order.html',
+        context={
+            'form': form,
+        }
+    )

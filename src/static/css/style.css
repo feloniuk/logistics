@@ -463,13 +463,6 @@ a.navbar-brand span {
 	box-shadow: -5px 6px 25px 0px rgba(0,0,0,0.75);
 }
 /*--slider--*/
-#slider2,
-#slider3 {
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  margin: 0 auto;
-}
 .rslides_tabs li:first-child {
   margin-left: 0;
 }
@@ -548,31 +541,6 @@ a.navbar-brand span {
 }
 .callbacks_nav.prev:hover {
     background-color: #23B684;
-}
-#slider3-pager a {
-  display: inline-block;
-}
-#slider3-pager span{
-  float: left;
-}
-#slider3-pager span{
-	width:100px;
-	height:15px;
-	background:#fff;
-	display:inline-block;
-	border-radius:30em;
-	opacity:0.6;
-}
-#slider3-pager .rslides_here a {
-  background: #FFF;
-  border-radius:30em;
-  opacity:1;
-}
-#slider3-pager a {
-  padding: 0;
-}
-#slider3-pager li{
-	display:inline-block;
 }
 .rslides {
   position: relative;
@@ -666,7 +634,8 @@ a.navbar-brand span {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
-	min-height:770px;
+	min-height:900px;
+	margin-top: 75px;
 }
 .banner-dott, .banner-dott1 {
     background: url(../images/dott.png)repeat 0px 0px;
@@ -675,8 +644,6 @@ a.navbar-brand span {
     -moz-background-size: 2px;
     -o-background-size: 2px;
     -ms-background-size: 2px;
-	min-height:900px;
-	margin-top: 50px;
 }
 
 .w3ls-button {
@@ -1031,7 +998,7 @@ section.slider {
 .agileits-klogistics-footer{
     position: relative;
     background: #131313;
-    padding: 2.5em 0;
+    padding: 2em 0;
 }
 .w3-agile-grid h5{
     text-transform: uppercase;
